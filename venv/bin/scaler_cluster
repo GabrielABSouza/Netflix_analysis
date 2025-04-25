@@ -1,0 +1,10 @@
+#!/bin/sh
+'''exec' "/Users/gabrielbastos/Pós-Graduação/Programação aplicada a ciência de dados/Netflix_analysis-1/venv/bin/python3" "$0" "$@"
+' '''
+# -*- coding: utf-8 -*-
+import re
+import sys
+from scaler.entry_points.cluster import main
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())
